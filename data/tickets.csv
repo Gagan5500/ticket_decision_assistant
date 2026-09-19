@@ -1,0 +1,11 @@
+ticket_id,message,expected_action,expected_source,context_notes
+1,"I bought a luxury leather jacket for ₹4,500 (Order #9821). It arrived today with a tear down the sleeve. I want a refund.",REQUEST_PHOTOS,damaged_goods.md,"Order value exceeds ₹2,000 threshold and requires clear photos of damaged product and packaging"
+2,"Order #4421: My ₹800 coffee mug arrived shattered yesterday in the mail. Can I please get a replacement sent?",APPROVE_REPLACEMENT,damaged_goods.md,"Order value is under ₹2,000 and reported within the 48-hour delivery window"
+3,"I received shoes 18 days ago (Order #1029). The size is slightly too tight for me. I would like to return them.",REJECT_RETURN,returns.md,"Return request initiated after 18 days which exceeds the strict 7-day return window"
+4,"I purchased a cotton shirt 3 days ago (Order #3312). All original tags are intact and unworn. Can I return it?",APPROVE_RETURN,returns.md,"Eligible return within 7 days with original tags intact"
+5,"My order #8819 was shipped 14 business days ago and the carrier tracking shows no scan update for over a week.",APPROVE_LOST_TRANSIT_CLAIM,shipping.md,"Package has exceeded 10 business days without tracking movement and qualifies as lost in transit"
+6,"Please update the shipping address for Order #5512. It was dispatched yesterday and is currently on the delivery truck.",REJECT_REROUTE,shipping.md,"Address change requested after order has already dispatched which is not permitted"
+7,"My return for Order #2219 was inspected and approved 10 business days ago, but the refund is still not credited to my bank account.",ESCALATE_TO_BILLING,refunds.md,"Exceeds the standard 5-7 business day refund window and requires escalation with billing reference"
+8,"I placed order #1102 two hours ago and would like to cancel it before it is dispatched from the warehouse.",APPROVE_REFUND,refunds.md,"Pre-dispatch cancellation is eligible for immediate full refund within 24 hours"
+9,"I received an item marked as Final Sale discount and don't like the color. Can I return it under Order #7712?",REJECT_RETURN,returns.md,"Items marked as Final Sale or clearance are strictly non-returnable"
+10,"Hello, I need help with my recent broken delivery please assist.",NEEDS_MORE_INFORMATION,damaged_goods.md,"Ticket lacks order ID, item value, delivery timeframe, or specific details"

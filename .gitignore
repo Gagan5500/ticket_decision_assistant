@@ -19,7 +19,9 @@ venv/
 *.sqlite3
 
 # IDE and OS
-.vscode/
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
 .idea/
 .DS_Store
 Thumbs.db

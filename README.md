@@ -167,6 +167,12 @@ streamlit run streamlit_app.py
 ```
 - Streamlit will open at: `http://localhost:8501`
 
+### 3. Or 1-Click Run via VS Code (F5)
+Pre-configured VS Code debug profiles are available in `.vscode/launch.json`:
+1. Press `Ctrl + Shift + D` to open the **Run and Debug** view.
+2. Select **`1. Run FastAPI Backend`** and press `F5`.
+3. Select **`2. Run Streamlit App`** and press `F5`.
+
 ---
 
 ## 🧪 Running Automated Tests
